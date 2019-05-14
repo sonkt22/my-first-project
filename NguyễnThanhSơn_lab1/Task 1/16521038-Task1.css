@@ -1,0 +1,21 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    background:url("https://www.w3schools.com/howto/img_parallax.jpg");
+    height: 100%;
+    width:100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#maunen{
+    background:rgba(248, 247, 251, 0.6);
+}
+.Cauhoi{
+    font-weight: bold;
+    font-style: italic;
+}
+.class2{
+    padding-left: 8px;
+}

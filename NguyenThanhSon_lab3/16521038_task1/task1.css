@@ -1,0 +1,14 @@
+a{
+    color: black;
+}
+h2{
+    color: red;
+}
+.list1{
+    margin-left: 40px;
+}
+table, th, td{
+    border:  1px solid;
+    padding: 5px;
+    text-align: center;
+}

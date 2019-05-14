@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nguyễn Thanh Sơn - 16521038 - Lab 3</title>
+
+    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./task1.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/docs.min.css">
+    <link rel="stylesheet" href="task1.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Làm quen với Javascript</h2>
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                        <b>Câu 3.1.1:</b> Có những cách đặt Javascript nào trong file HTML? Cho ví dụ minh họa.
+                    </a>
+                </div>
+                <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        <h5>Cách 1: Nhúng JavaScript kiểu Internal</h5>
+                        <div>Nhúng Internal có thể hiểu là chúng ta chèn code JavaScript vào một cụm nào đó trong tập
+                            tin HTML. Thông thường thì anh em hay nhóm nó vào trong cặp thẻ <span
+                                class="nt">&lt;head&gt;</span> và <span class="nt">&lt;body&gt;</span> .
+                        </div>
+                        <ul>
+                            <li>Nhúng trong cặp thẻ <span class="s">&lt;head&gt;</span>:
+                                <pre class="lang:default decode:true ">
+                                    <span class="nt">&lt;html&gt;</span>
+                                        <span class="nt">&lt;head&gt;</span>
+                                            <span class="nt">&lt;title&gt;</span>Tiêu đề website<span class="nt">&lt;/title&gt;</span>
+                                                <span class="nt">&lt;script</span> language="javascript"<span class="nt">&gt;</span>
+                                                    <span class="s">alert</span>("Chào mừng bạn đến với Hocban.vn");
+                                                <span class="nt">&lt;/script&gt;</span>
+                                        <span class="nt">&lt;/head&gt;</span>
+                                        <span class="nt">&lt;body&gt;</span>
+                                             Nội dung website       
+                                        <span class="nt">&lt;/body&gt;</span>
+                                    <span class="nt">&lt;/html&gt;</span>
+                                </pre>
+                            </li>
+                            <li>Nhúng trong cặp thẻ <span class="s">&lt;body&gt;</span>:
+                                <pre class="lang:default decode:true ">
+                                        <span class="nt">&lt;html&gt;</span>
+                                            <span class="nt">&lt;head&gt;</span>
+                                                <span class="nt">&lt;title&gt;</span>Tiêu đề website<span class="nt">&lt;/title&gt;</span>
+                                            <span class="nt">&lt;/head&gt;</span>
+                                            <span class="nt">&lt;body&gt;</span>
+                                                <span class="nt">&lt;script</span> language="javascript"<span class="nt">&gt;</span>
+                                                    <span class="s">alert</span>("Chào mừng bạn đến với NTS Intertaiment");
+                                                <span class="nt">&lt;/script&gt;</span>                                            
+                                            <span class="nt">&lt;/body&gt;</span>
+                                        <span class="nt">&lt;/html&gt;</span>
+                                </pre>
+                            </li>
+                        </ul>
+                        <h5>Cách 2: Nhúng JavaScript kiểu inline</h5>
+                        <div>
+                            Đối với cách nhúng inline chúng ta có thể chèn ngay vị trí bất kỳ của một dòng code HTML.
+                            Trong ví dụ dưới đây mình sẽ tạo 03 vùng chọn tương ứng với 03 thẻ <span
+                                class="s">&lt;div&gt;</span>,
+                            trong đó mình chọn thẻ <span class="s">&lt;div&gt;</span> ở giữa là class <span
+                                class="nt">.vung-chon-tuy-y</span>,
+                            và đặt vào nó một đoạn JavaScript cho nó làm việc.
+                        </div>
+                        <pre class="lang:default decode:true ">
+                            <span class="nt">&lt;html&gt;</span>
+                                <span class="nt">&lt;head&gt;</span>
+                                    <span class="nt">&lt;style</span> <span class="na">type</span>="text/css"
+                                        .vung-chon-tuy-y{
+                                        background: #fffaca;
+                                        padding: 20px;
+                                        }
+                                    <span class="nt">&lt;/style&gt;</span>
+                                <span class="nt">&lt;/head&gt;</span>
+                                <span class="nt">&lt;body&gt;</span>
+                                    <span class="nt">&lt;div&gt;</span> Vùng chọn số 1 <span class="nt">&lt;/div&gt;</span>
+                                    <span class="nt">&lt;div</span> <span class="na">class</span>="vung-chon-tuy-y"<span class="nt">&gt;</span>
+                                        <span class="nt">&lt;h2&gt;</span>Chèn JavaScript kiểu Inline, ví dụ hiển thị thời gian hiện tại<span class="nt">&lt;/h2&gt;</span>
+                                        <span class="nt">&lt;button</span> <span class="na">type</span>="button" <span class="na">onclick</span>="document.getElementById('hien-thi-thoi-gian-ra').innerHTML = Date()"<span class="nt">&gt;</span> 
+                                            Nhấn vào để xem thời gian
+                                        <span class="nt">&lt;/button&gt;</span>
+                                        <span class="nt">&lt;p</span> id="hien-thi-thoi-gian-ra"<span class="nt">&gt;</span><span class="nt">&lt;/p&gt;</span>
+                                    <span class="nt">&lt;/div&gt;</span>
+                                <span class="nt">&lt;/body&gt;</span>
+                            <span class="nt">&lt;/html&gt;</span>
+                        </pre>
+                        <h5>Cách 3: Nhúng JavaScript kiểu External</h5>
+                        <div>Nếu cách một và cách 02 chúng ta nhúng file JavaScript vào trong văn bản HTML thì cách
+                            nhúng External sẽ khác một chút, để nhúng kiểu này đầu tiên các bạn dán code JavaScript vào
+                            một file txt và lưu lại với định dạng <b>.JS.</b>
+                        </div>
+                        <div>
+                            Tiếp theo trong thẻ <span class="nt">&lt;script&gt;</span>, để viết JavaScript thì chúng ta
+                            viết đường dẫn đến file JavaScript đã
+                            lưu sử dụng cú pháp bên dưới. Bạn có thể tạo một thư mục và copy 02 cái file HTML và JS vào
+                            trong đó.
+                        </div>
+                        <pre class="lang:default decode:true">
+                            <span class="nt">&lt;html&gt;</span>
+                                <span class="nt">&lt;head&gt;</span>
+                                    &lt;script language="javascript" src="ten-file-javascript.js"&gt;&lt;/script&gt;
+                                    &lt;title&gt;Tiêu đề website&lt;/title&gt;
+                                <span class="nt">&lt;/head&gt;</span>
+                                <span class="nt">&lt;body&gt;</span>
+                                    Nội dung website       
+                                <span class="nt">&lt;/body&gt;</span>
+                            <span class="nt">&lt;/html&gt;</span>
+                        </pre>
+                        <h5>Cách 4: Nhúng kiểu External References</h5>
+                        <div>
+                            Nhúng từ một file JavaScript có đường dẫn bất kỳ trên Internet, cách này có tên gọi là:
+                            External References. Cú pháp của nó có dạng như sau:
+                        </div>
+                        <br />
+                        <pre class="lang:default decode:true">
+                            <span class="nt">&lt;script</span> src="https://www.w3schools.com/js/myScript1.js"<span class="nt">&gt;</span><span class="nt">&lt;/script&gt;</span>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                        <b>Câu 3.1.2:</b> Có thể hiển thị dữ liệu từ Javascript với những cách nào? Cho ví dụ minh họa.
+                    </a>
+                </div>
+                <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <h5>Khả năng hiển thị JavaScript</h5>
+                        <ul>JavaScript có thể "hiển thị" dữ liệu theo nhiều cách khác nhau:
+                            <li class="list1">Viết thành một phần tử HTML, sử dụng innerHTML.</li>
+                            <li class="list1">Viết vào đầu ra HTML bằng cách sử dụng document.write().</li>
+                            <li class="list1">Viết vào một hộp cảnh báo, sử dụng window.alert().</li>
+                            <li class="list1">Viết vào bảng điều khiển trình duyệt, sử dụng console.log().</li>
+                        </ul>
+                        <h5>Sử dụng innerHTML</h5>
+                        <div>
+                            Để truy cập vào một phần tử HTML, JavaScript có thể sử dụng phương thức
+                            document.getElementById (id).
+                            Thuộc tính id xác định phần tử HTML. Thuộc tính innerHTML định nghĩa nội dung HTML:
+                            <pre>
+                                &lt;!DOCTYPE html&gt;
+                                &lt;html&gt;
+                                &lt;body&gt;
+                                    &lt;h1&gt;My First Web Page&lt;/h1&gt;
+                                    &lt;p&gt;My First Paragraph&lt;/p&gt;
+                                    &lt;p id="demo"&gt;&lt;/p&gt;
+                                    &lt;script&gt;
+                                        document.getElementById("demo").innerHTML = 5 + 6;
+                                    &lt;/script&gt;
+                                &lt;/body&gt;
+                                &lt;/html&gt;
+                            </pre>
+                            <h5>Sử dụng document.write()</h5>
+                            <pre>
+                                &lt;!DOCTYPE html&gt;
+                                &lt;html&gt;
+                                &lt;body&gt;
+                                    &lt;h1&gt;My First Web Page&lt;/h1&gt;
+                                    &lt;p&gt;My First Paragraph&lt;/p&gt;
+                                    &lt;p id="demo"&gt;&lt;/p&gt;
+                                    &lt;script&gt;
+                                        document.write(5 + 6);
+                                    &lt;/script&gt;
+                                &lt;/body&gt;
+                                &lt;/html&gt;
+                            </pre>
+                            Phương thức document.write () chỉ nên được sử dụng để thử nghiệm.
+                            <h5>Sử dụng window.alert()</h5>
+                            Bạn có thể sử dụng một hộp cảnh báo để hiển thị dữ liệu:
+                            <pre>
+                                &lt;!DOCTYPE html&gt;
+                                &lt;html&gt;
+                                &lt;body&gt;
+                                    &lt;h1&gt;My First Web Page&lt;/h1&gt;
+                                    &lt;p&gt;My First Paragraph&lt;/p&gt;
+                                    &lt;p id="demo"&gt;&lt;/p&gt;
+                                    &lt;script&gt;
+                                        window.alert(5 + 6);
+                                    &lt;/script&gt;
+                                &lt;/body&gt;
+                                &lt;/html&gt;
+                            </pre>
+                            <h5>Sử dụng console.log()</h5>
+                            Đối với mục đích gỡ lỗi, bạn có thể sử dụng phương pháp console.log() để hiển thị dữ liệu.
+                            <pre>
+                                &lt;!DOCTYPE html&gt;
+                                &lt;html&gt;
+                                &lt;body&gt;
+                                    &lt;h1&gt;My First Web Page&lt;/h1&gt;
+                                    &lt;p&gt;My First Paragraph&lt;/p&gt;
+                                    &lt;p id="demo"&gt;&lt;/p&gt;
+                                    &lt;script&gt;
+                                        console.log(5 + 6);
+                                    &lt;/script&gt;
+                                &lt;/body&gt;
+                                &lt;/html&gt;
+                            </pre>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                        <b>Câu 3.1.3:</b> Làm thế nào để truy xuất (lấy giá trị) 1 thẻ HTML bất kỳ theo ID, theo Class,
+                        theo Name,
+                        theo tên thẻ HTML và theo CSS Selector? Cho ví dụ minh họa.
+                    </a>
+                </div>
+                <div id="collapseThree" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <div>
+                            <h5>Tìm thẻ HTML theo ID</h5>
+                            Để truy xuất tới một thẻ HTML theo ID ta sử dụng cú pháp sau:
+                            <pre>
+                                    &lt;!DOCTYPE html&gt;
+                                    &lt;html&gt;
+                                    &lt;body&gt;
+                                        &lt;input type="text" value="Freetuts.net" id="website" /&gt;
+                                        &lt;script&gt;
+                                            // Lấy thẻ input
+                                            var element = document.getElementById('website');
+                                        
+                                            // Lấy giá trị của thẻ input
+                                            document.write(element.value);
+                                        &lt;/script&gt;
+                                    &lt;/body&gt;
+                                    &lt;/html&gt;
+                            </pre>
+                            <h5>Tìm thẻ HTML theo tên của thẻ HTML</h5>
+                            Tên thẻ HTML chính là tên các thẻ như p, a, div, ... Và ta sẽ truy xuất tới nó bằng cú pháp
+                            sau:
+                            <pre>
+                                    &lt;!DOCTYPE html&gt;
+                                    &lt;html&gt;
+                                    &lt;body&gt;
+                                        &lt;input type="text" value="Freetuts.net" /&gt;
+                                        &lt;script&gt;
+                                            // Lấy thẻ input
+                                            var element = document.getElementByTagName('input');
+                                        
+                                            // Lấy giá trị của thẻ input
+                                            document.write(element[0].value);
+                                        &lt;/script&gt;
+                                    &lt;/body&gt;
+                                    &lt;/html&gt;
+                            </pre>
+                            Trong ví dụ này có sự khác biệt đó là đoạn code element[0].value. Tại sao lại như vậy? Như
+                            bạn biết trong một trang web có thể có nhiều thẻ HTML giống nhau (ví dụ có hai thẻ div) nên
+                            hàm getElementsByTagName() sẽ trả về một mảng các object chứ
+                            không phải là một object nữa, chính vì vậy ta sẽ lấy input thứ nhất nên truyền số 0 vào.
+                            <h5>Tìm thẻ HTML theo tên class</h5>
+                            Để tìm các thẻ HTML có class nào đó thì ta dùng cú pháp sau:
+                            <pre>
+                                    &lt;!DOCTYPE html&gt;
+                                    &lt;html&gt;
+                                    &lt;body&gt;
+                                        &lt;input type="text" value="Freetuts.net" class="website" /&gt;
+                                        &lt;script&gt;
+                                            // Lấy thẻ input
+                                            var element = document.getElementByClassName('website');
+                                        
+                                            // Lấy giá trị của thẻ input
+                                            document.write(element[0].value);
+                                        &lt;/script&gt;
+                                    &lt;/body&gt;
+                                    &lt;/html&gt;
+                            </pre>
+                            Tương tự như tìm theo tên thẻ HTML thì tìm theo tên class sẽ trả về một mảng các object nên
+                            bạn sẽ phải sử dụng cú pháp truy xuất mảng để chọn đúng đối tượng muốn lấy.
+                            <h5>Tìm thẻ HTML theo cú pháp của Selector CSS</h5>
+                            Khi chọn các thẻ HTML theo class thường sẽ trả về hàng loạt các kết quả, như vậy đôi khi sẽ
+                            có những kết quả mà ta không mong đợi. Chính vì vậy javascript DOM có một phương thức kết
+                            hợp với CSS Selector để truy vấn có độ chính xác cao hơn.
+                            <br /><br />
+                            Và đây là cú pháp sử dụng:
+                            <pre>
+                                    var element = document.querySelectorAll("selector.css");
+                            </pre>
+                            Trong CSS để chọn thẻ input nằm trong thẻ div và có class="website" thì cú pháp là:
+                            <pre>
+                                    &lt;!DOCTYPE html&gt;
+                                    &lt;html&gt;
+                                    &lt;body&gt;
+                                        &lt;input type="text" value="thẻ không cần lấy" class="website" /&gt;
+                                        &lt;div&gt;
+                                            &lt;input type="text" value="Thẻ Cần Lấy" class="website"/&gt;
+                                            &lt;input type="text" value="thẻ không cần lấy"/&gt;
+                                        &lt;/div&gt;
+                                        &lt;script&gt;
+                                            // Lấy thẻ input
+                                            var element = document.getElementByClassName('website');
+                                        
+                                            // Lấy giá trị của thẻ input
+                                            document.write('&lt;h3&gt;Nội dung thẻ cần lấy là: ' + element[0].value + '&lt;/h3&gt;');
+                                        &lt;/script&gt;
+                                    &lt;/body&gt;
+                                    &lt;/html&gt;
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
+                        <b>Câu 3.1.4:</b> Xác định các lệnh Javascript tương ứng để thực hiện các yêu cầu sau:
+                        <ul>
+                            <li>Hiển thị ngày tháng và thời gian hiện tại.</li>
+                            <li>Thay đổi nội dung trong 1 thẻ HTML đang có</li>
+                            <li>Hiển thị một số ngẫu nhiên (random) từ 1 đến 1000.</li>
+                            <li>Cộng, trừ, nhân, chia, chia lấy phần dư.</li>
+                        </ul>
+                    </a>
+                </div>
+                <div id="collapseFour" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <div>
+                            <h5>Hiển thị ngày tháng và thời gian hiện tại.</h5>
+                            <ul>Trong Javascript tổng cộng có 10 hàm thiết lập thời gian thông dụng:
+                                <li class="list1">getDate() lấy ngày (1 - 31)</li>
+                                <li class="list1">getDay() lấy ngày trong tuần (0-6)</li>
+                                <li class="list1">getFullYear() lấy năm đầy đủ (YYYY)</li>
+                                <li class="list1">getYear() lấy năm 2 số cuối (YY)</li>
+                                <li class="list1">getHours() lấy số giờ (0 - 23)</li>
+                                <li class="list1">getMiliSeconds() lấy số mili giây (0 - 999)</li>
+                                <li class="list1">getMinutes() lấy số phút (0 - 59)</li>
+                                <li class="list1">getMonth() lấy tháng (0 - 11)</li>
+                                <li class="list1">getSeconds() lấy số giây (0 - 59)</li>
+                                <li class="list1">getTime() thời gian đã được convert sang dạng miliseconds.</li>
+                            </ul>
+                            <ul>Tương ứng với mỗi hàm Date Get thì sẽ có một hàm Date Set (trừ hàm getDay()).
+                                <li class="list1">setDate() thiết lập ngày (1 - 31)</li>
+                                <li class="list1">setFullYear() thiết lập năm đầy đủ (YYYY)</li>
+                                <li class="list1">setYear() thiết lập năm 2 số cuối (YY)</li>
+                                <li class="list1">setHours() thiết lập số giờ (0 - 23)</li>
+                                <li class="list1">setMiliSeconds() thiết lập số mili giây (0 - 999)</li>
+                                <li class="list1">setMinutes() thiết lập số phút (0 - 59)</li>
+                                <li class="list1">setMonth() thiết lập tháng (0 - 11)</li>
+                                <li class="list1">setSeconds() thiết lập số giây (0 - 59)</li>
+                                <li class="list1">setTime() thiết lập thời gian đã được convert sang dạng miliseconds.
+                                </li>
+                            </ul>
+                            <ul><b>Lưu ý</b>
+                                <li class="list1">Vì đây là hàm set nên bạn phải truyền tham số vào.</li>
+                                <li class="list1">Các hàm có ảnh hưởng lẫn nhau nhé các bạn, ví dụ bạn thiết lập ngày
+                                    giờ không đúng
+                                    thì nó sẽ lấy ngày giờ mặc định.</li>
+                                <li class="list1">Nếu bạn dùng hàm setTime() để thiết lập thì nó ảnh hưởng tới tất cả
+                                    các giá trị còn
+                                    lại bởi vì setTime() là hàm thiết lập thời gian đầy đủ đã chuyển sang dạng
+                                    miniseconds.</li>
+                            </ul>
+                            <b>Khởi tạo ngày giờ tại thời điểm hiện tại: </b>new Date();
+                            <h5>Thay đổi nội dung trong 1 thẻ HTML đang có</h5>
+                            Để thay đổi nội dung của một thẻ HTML thì ta sử dụng thuộc tính <b>innerHTML</b>, nhưng trước khi sử
+                            dụng thuộc tính đó thì ta phải sử dụng DOM để lấy thẻ div cần thay đổi nội dung và gán sự
+                            kiện click vào 2 button.<br />
+                            Ví dụ:
+                            <pre>
+                                    button1.onclick = function(){
+                                        div.innerHTML = 'Demo thay đổi nội dung thẻ div bằng Javascript';
+                                    };
+                            </pre>
+                            <h5>Hiển thị một số ngẫu nhiên (random) từ 1 đến 1000.</h5>
+                            Math.random() được sử dụng với Math.floor() có thể được sử dụng để trả lại số nguyên ngẫu nhiên.
+                            <br />
+                            Math.floor(Math.random() * 1000) + 1; // returns a number between 1 and 1000
+                            <h5>Cộng, trừ, nhân, chia, chia lấy phần dư.</h5>
+                            <table>
+                                <tr>
+                                    <th>Toán tử</th>
+                                    <th>Mô tả</th>
+                                </tr>
+                                <tr>
+                                    <td>+</td>
+                                    <td>Cộng</td>
+                                </tr>
+                                <tr>
+                                    <td>-</td>
+                                    <td>Trừ</td>
+                                </tr>
+                                <tr>
+                                    <td>*</td>
+                                    <td>Nhân</td>
+                                </tr>
+                                <tr>
+                                    <td>/</td>
+                                    <td>Chia</td>
+                                </tr>
+                                <tr>
+                                    <td>%</td>
+                                    <td>Chia lấy dư</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

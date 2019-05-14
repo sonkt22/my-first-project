@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>16521038-Nguyễn Thanh Sơn-Task 1</title>
+    <link rel="stylesheet" type="text/css" href="16521038-Task1.css" >
+</head>
+<body>
+    <div id="maunen">
+    <h4>16521038-Nguyễn Thanh Sơn-Task 1</h4>
+    <ol type="a">
+        <li>
+            <div class="Cauhoi"><h4>So sánh file HTML có định dạng .html và .htm. Nếu không có các thẻ &lt;html&gt;, &lt;head&gt;
+                    và &lt;body&gt; thì có ảnh hưởng gì trong file HTML không?</h4>
+            </div>
+            <div>Trả lời:</div>
+            <div>- Hoàn toàn không có sự khác biệt giữa file .html và .htm. Chúng có thể sử dụng thay thế cho nhau. Do đó, bạn có thể đổi tên một file với phần đuôi .html thành .htm và ngược lại. Trình duyệt web sẽ vẫn hiển thị nội dung dưới cùng một hình thức. Ngày xưa, trên nhiều hệ điều hành, phần mở rộng của file chỉ được sử dụng 3 kí tự. Điều này đặc biệt đúng với Microsoft Windows, nền tảng hệ điều hành phổ biến nhất. Thế nên, rất nhiều những trang web được tạo từ những ngày xưa cũ ấy sẽ có phẩn mở rộng là .htm, chỉ 3 kí tự mà thôi.</div>
+            <div>- Theo chuẩn của HTML5, có thể loại bỏ các thẻ &lt;html&gt;, &lt;body&gt; và &lt;head&gt; mà đoạn code vẫn hợp lệ.Tuy vậy không nên bỏ thẻ &lt;html&gt; và &lt;body&gt; vì có thể khiến các phần mềm DOM hay XML bị crash hoặc gặp lỗi trên các trình duyệt cũ (như IE9). Việc bỏ thẻ &lt;head&gt; thì khá thường xuyên.</p>
+        </li>
+        <li>
+            <div class="Cauhoi">Có những cách nào để hiển thị các thẻ HTML để hiển thị ra bên ngoài mà không bị HTML
+                    xử lý. Ví dụ hiển thị các nội dung như &lt;/br&gt; &lt;div&gt;&lt;h1&gt;Hello HTML&lt;/h1&gt;&lt;/div&gt;&lt;/div&gt;
+            </div>
+            <div>Trả lời:</div>
+            <div>- Để hiển thị các thẻ HTML để hiển thị ra bên ngoài mà không bị HTML xử lí có 2 cách:</div>
+            <div class="class2">+ Cách 1: Dấu < được thay bởi <span>&</span><span>lt;</span> dấu > được thay bởi <span>&</span><span>gt;</span></div>
+            <div>Ví dụ: &lt;/br&gt; &lt;div&gt;&lt;h1&gt;Hello HTML&lt;/h1&gt;&lt;/div&gt;&lt;/div&gt;
+            <div class="class2">+ Cách 2: Dấu < được thay bởi #60; và dấu & ở trước và dấu > được thay bởi #62; và dấu & đặt ở trước.</div>
+            <div>Ví dụ: &#60;/br&#62; &#60;div&#62;&#60;h1&#62;Hello HTML&#60;/h1&#62;&#60;/div&#62;&#60;/div&#62;</p>
+        </li>
+        <li>
+            <div class="Cauhoi">Làm thế nào để tạo vùng chọn để định dạng trong CSS cho một tag, một class, một ID?</div>
+            <div>Trả lời:</div>
+            <div>- Vùng chọn là những phần tử, mà các quy tắc CSS bạn định nghĩa được áp dụng trên đó. Cấu trúc của mã lệnh CSS bất kỳ như sau:</div>
+            <div>
+                    <pre>
+                            list selectors {
+                                attribute : value;
+                              
+                                [... more ...]
+                            }</pre>
+            </div>           
+            <div>- Đầu tiên là xác định vùng chọn kế theo đó toàn bộ các thuộc tính để định dạng sẽ bỏ trong cặp dấu ngoặc nhọn.</div>
+            <div>
+                <table border="1" cellspacing="1" cellpadding="2px">
+                    <tr>
+                        <th>Selector</th>
+                        <th>Ví dụ</th>
+                        <th>Giải thích ví dụ</th>
+                    </tr>
+                    <tr>
+                        <td>.class</td>
+                        <td>.example</td>
+                        <td>Chọn toàn bộ thẻ có class="example"</td>
+                    </tr>   
+                    <tr>
+                        <td>#id</td>
+                        <td>#example</td>
+                        <td>Chọn toàn bộ thẻ có id="example"</td>
+                    </tr>
+                    <tr>
+                        <td>html</td>
+                        <td>p</td>
+                        <td>Chọn toàn bộ thẻ &lt;p&gt;</td>
+                    </tr>
+                </table>
+            </p>
+        </li>
+        <li>
+            <div class="Cauhoi">Tìm và cho ví dụ về các thẻ có các chức năng sau:</div>
+            <div>Trả lời:</div>
+            <div>- Thẻ gạch chân: &lt;u&gt;&lt;/u&gt;  Ví dụ:<u>Thẻ u trong HTML</u>.</div>
+            <div>- Thẻ kẻ đường ngang: &lt;hr /&gt; Ví dụ: Thẻ hr trong HTML <hr /> </div>
+            <div>- Thẻ chỉ số trên: &lt;sup&gt;&lt;/sup&gt; Ví dụ:<sup>Thẻ sup trong HTML</sup>.</div>
+            <div>- Thẻ chỉ số dưới: &lt;sub&gt;&lt;/sub&gt; Ví dụ:<sub>Thẻ sup trong HTML</sub>. </div>
+            <div>
+                <div>- Thẻ tạo bảng: &lt;table&gt;&lt;/table&gt; </div>
+                <div>Ví dụ tạo bảng:</div>
+                <table border="1" cellspacing="0">
+                    <tr>
+                        <td rowspan="2">STT</td>
+                        <td rowspan="2">MSSV</td>
+                        <td rowspan="2">Họ tên</td>
+                        <td colspan="3">Ngày tháng năm sinh</td>
+                    </tr>
+                    <tr>
+                        <td>Ngày</td>
+                        <td>Tháng</td>
+                        <td>Năm</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>16521038</td>
+                        <td>Nguyễn Thanh Sơn</td>
+                        <td>22</td>
+                        <td>10</td>
+                        <td>1998</td>
+                    </tr>
+                </table>
+            </p>
+            <div>
+                <div>- Thẻ tạo chữ chạy: &lt;Marquee&gt;&lt;/Marquee&gt; </div>
+                <div class="class2">
+                    + Ví dụ chữ chạy phải sang trái:
+                    <div><marquee width="50%">Ví dụ cách sử dụng thẻ marquee (direction="left")</marquee></div>  
+                </div>
+                <div class="class2">
+                    + Ví dụ chữ chạy trái sang phải: 
+                    <div>
+                        <marquee direction="right">Ví dụ cách sử dụng thẻ marquee (direction="right")</marquee>
+                    </div>
+                </div>
+                <div class="class2">
+                    + Ví dụ chữ chạy dưới lên trên: 
+                    <div>
+                        <marquee direction="up">Ví dụ cách sử dụng thẻ marquee (direction="up")</marquee>
+                    </div>
+                </div>
+                <div class="class2">
+                    + Ví dụ chữ chạy trên xuống dưới: 
+                    <div>
+                        <marquee direction="down">Ví dụ cách sử dụng thẻ marquee (direction="down")</marquee>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ol>  
+    </div> 
+</body>
+</html>

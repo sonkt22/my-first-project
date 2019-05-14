@@ -1,0 +1,51 @@
+body{
+    margin-top: 20px;
+    margin-left: 150px;
+}
+form{
+    margin: 30px;
+}
+.gioitinh1{
+    margin-bottom: 20px;
+}
+
+input{
+    margin-right: 5px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+h2{
+    margin-left: 10px;
+}
+.birthday{
+    margin-bottom: 10px;
+}
+.indates{
+    height: 30px;
+    width: 70px;
+    font-size: 14px;
+}
+.inmouths{
+    height: 30px;
+    font-size: 14px;
+    width: 90px;
+}
+.inyears{
+    height: 30px;
+    font-size: 14px;
+    width: 90px;
+}
+.submit{
+    margin-left: 120px;
+}
+.nam1{
+    margin-right: 30px;
+}
+.template{
+    width: 340px;
+    height: 400px;
+    background-color: chocolate;
+}
+.col-md-7{
+    background-color: darkkhaki;
+}

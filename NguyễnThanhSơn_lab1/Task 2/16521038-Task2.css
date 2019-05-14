@@ -1,0 +1,207 @@
+body{
+    margin-top: 100px;
+    color: aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.A4{
+    border-style: solid;
+    border-color: #3280BD;
+    width: 1654px;
+    height: 2339px;
+    margin: 0 auto;
+    background-color: 0xFFFFF;
+}
+.Khu1{
+    width:30%;
+    height: 100%;
+    background-color:#3280BD;
+    float:left;
+}
+.clear-fix{
+    clear:both;
+}
+.Khu2{
+    color: black;
+    width:70%;
+    float:left;
+    height:100%;
+    background-color:#fff;
+}
+
+.avt-area {
+    background-color: #28699A;    
+    text-align: center;
+    color: #fff;
+    padding: 7%;
+}
+
+#anhdaidien{
+    width: 370px;
+	height: 370px;
+    text-align: center;
+    margin: 0 auto;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+#anh{
+    border-radius:50%;
+    width: 100%;
+
+}
+.ten{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 37px;
+    font-weight: bolder;
+    color: aliceblue;
+    margin-top: 30px;
+}
+.ul1{
+    list-style-type: none;
+    padding-top: 40px;
+    padding-left: 20px;
+    font-size: 26px;
+}
+.circle-icon{
+    padding: 10px;
+    font-size: 19px;
+    background-color: #28699A;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    display: inline-block;
+    transition:0.5s;
+    padding: 15px;
+}
+.list{
+    margin-bottom: 10px;
+}
+.aboutme{
+    margin-left: 20px;
+    margin-top: 60px;
+}
+.noidung{
+    font-size: 27px;
+    margin: 20px 20px 20px 25px;
+}
+.khua{
+    width:71%;
+    height: 12px;
+    background-color:#28699A;
+    float:left;
+}
+.khub{
+    width: 25%;
+    height: 12px;
+    float:left;
+    background-color: aliceblue;
+}
+.thanhtile{
+    margin: 7px 10px 35px 20px;
+}
+.skills{
+    margin-left:  20px;
+    font-size: 27px;
+}
+.khuc{
+    width:41%;
+    height: 12px;
+    background-color:#28699A;
+    float:left;
+}
+.khud{
+    width: 55%;
+    height: 12px;
+    float:left;
+    background-color: aliceblue;
+}
+.khue{
+    width:58%;
+    height: 12px;
+    background-color:#28699A;
+    float:left;
+}
+.khuf{
+    width: 38%;
+    height: 12px;
+    float:left;
+    background-color: aliceblue;
+}
+.ul2{
+    margin-left: 22px; 
+    font-size: 27px;
+}
+.li1{
+    margin-bottom: 40px;
+}
+.circle-icon2{
+    color: aliceblue;
+    padding: 20px;
+    font-size: 38px;
+    background-color: #28699A;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    display: inline-block;
+    transition:0.5s;
+    margin-left: 35px;
+    margin-top: 80px;   
+    margin-bottom: 50px;
+}
+.tieude{
+    font-size: 40px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+}
+.dong2{
+    font-size: 30px;
+    margin-right: 35px;
+    float: right;
+}
+.dong1{
+    font-size: 30px;
+    margin-left: 35px;
+    margin-bottom: 5px;
+    float: left;
+}
+.dong3{
+    font-size: 26px;
+    margin-left: 35px;
+    margin-bottom: 30px;
+}
+.dong4{
+    font-size: 30px;
+    margin-left: 35px;
+    margin-bottom: 40px;
+}
+.dong5{
+    font-size: 26px;
+    margin-left: 35px;
+    margin-bottom: 5px;
+}
+.dong7{
+    font-size: 30px;
+    margin-right: 35px;
+    margin-top: 30px;
+    float: right;
+}
+.dong6{
+    font-size: 30px;
+    margin-left: 35px;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    float: left;
+}
+.dong8{
+    font-size: 26px;
+    margin-left: 35px;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    float: left;
+}

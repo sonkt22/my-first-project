@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nguyễn Thanh Sơn - 16521038 - Lab 3</title>
+
+    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./task1.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/docs.min.css">
+    <link rel="stylesheet" href="task2.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Làm quen với Javascript</h2>
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                        <b>Câu 3.2.1:</b> Những vị trí nào có thể đặt Javascript trong file HTML và đặt theo cú pháp
+                        nào? Nên đặt
+                        Javascript tại vị trí nào để có hiệu suất tốt nhất? Cho ví dụ minh họa.
+                    </a>
+                </div>
+                <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        <div>
+                            <ul>Có một sự linh động trong việc cung cấp JavaScript code bất cứ đâu trong một tài liệu
+                                HTML. Tuy nhiên, các cách được ưu tiên nhất để bao gồm JavaScript trong một HTML file
+                                là:
+                                <li class="li1">Script trong khu vực &lt;head&gt;...&lt;/head&gt;</li>
+                                <li class="li1">Script trong khu vực &lt;body&gt;...&lt;/body&gt;</li>
+                                <li class="li1">Script trong khu vực &lt;body&gt;...&lt;/body&gt; và
+                                    &lt;head&gt;...&lt;/head&gt;.</li>
+                                <li class="li1">Script trong file ngoại vi và sau đó bao gồm trong khu vực
+                                    &lt;head&gt;...&lt;/head&gt;.</li>
+                            </ul>
+                            <h5>JavaScript trong khu vực &lt;head&gt;...&lt;/head&gt;</h5>
+                            Nếu bạn muốn có một script chạy trên một số sự kiện, như khi người sử dụng vào nơi nào đó,
+                            thì khi đó sẽ đặt script đó trong Head như sau:
+                            <pre>
+                                    &lt;html&gt; 
+                                    &lt;head&gt; 
+                                        &lt;script type="text/javascript"&gt; 
+                                            function sayHello() 
+                                            { alert("Hello World") }
+                                        &lt;/script&gt; 
+                                    &lt;/head&gt; 
+                                    &lt;body&gt; 
+                                        &lt;input type="button" onclick="sayHello()" value="Xin chao!" /&gt; 
+                                    &lt;/body&gt; 
+                                    &lt;/html&gt;
+                            </pre>
+                            <h5>JavaScript trong khu vực &lt;body&gt;...&lt;/body&gt;</h5>
+                            Nếu cần một script để chạy khi trang tải để mà script này tạo nội dung trong trang, thì
+                            khi đó, script nên là một phần &lt;body&gt; của tài liệu. Trong trường hợp này, sẽ không có
+                            bất kỳ hàm nào được định nghĩa
+                            bởi sử dụng JavaScript. Xem code sau:
+                            <pre>
+                                    &lt;html&gt; 
+                                    &lt;head&gt; 
+                                    &lt;/head&gt; 
+                                    &lt;body&gt; 
+                                        &lt;script type="text/javascript"&gt; 
+                                            document.write("Hello World")
+                                        &lt;/script&gt; 
+                                        &lt;p&gt;This is web page body &lt;/p&gt; 
+                                    &lt;/body&gt; 
+                                    &lt;/html&gt;
+                            </pre>
+                            <h5>JavaScript trong khu vực &lt;body&gt; và &lt;head&gt;</h5>
+                            Có thể đặt JavaScript code trong khu vực &lt;body&gt; và &lt;head&gt; như sau
+                            <pre>
+                                    &lt;html&gt; 
+                                    &lt;head&gt; 
+                                        &lt;script type="text/javascript"&gt;
+                                            function sayHello() { alert("Hello World") }
+                                        &lt;/script&gt; 
+                                    &lt;/head&gt; 
+                                    &lt;body&gt; 
+                                        &lt;script type="text/javascript"&gt;
+                                            document.write("Hello World") 
+                                        &lt;/script&gt; 
+                                        &lt;input type="button" onclick="sayHello()" value="Xin chao!" /> 
+                                    &lt;/body&gt; 
+                                    &lt;/html&gt;
+                            </pre>
+                            <h5>JavaScript trong file ngoại vi</h5>
+                            Khi bắt đầu làm việc rộng rãi hơn với JavaScript, sẽ tìm thấy rằng có các trường hợp
+                            sử dụng lại JavaScript code đồng nhất trên nhiều trang của một site.<br />
+                            Không bị giới hạn để duy trì code đồng nhất trong nhiều HTML file. Thẻ script cung cấp
+                            một kỹ thuật cho phép lưu JavaScript trong một file ngoại vi và sau đó bao gồm nó trong
+                            các HTML file.<br />
+                            Dưới đây là một ví dụ để chỉ cách có thể bao gồm một JavaScript file ngoại vi trong HTML
+                            code bởi sử dụng thẻ script và thuộc tính src của nó.<br />
+                            <pre>
+                                    &lt;html&gt; 
+                                    &lt;head&gt; 
+                                        &lt;script type="text/javascript" src="filename.js" &gt;</script> 
+                                    &lt;/head&gt; 
+                                    &lt;body&gt; 
+                                        ....... 
+                                    &lt;/body&gt; 
+                                    &lt;/html&gt;
+                            </pre>
+                            Để sử dụng JavaScript từ một nguồn file ngoại vi, cần viết tất cả code nguồn JavaScript
+                            của bạn trong một file văn bản đơn với đuôi mở rộng ".js" và sau đó bao gồm file đó như
+                            trên.<br />
+                            Ví dụ, có thể giữ nội dung sau trong filename.js và sau đó có thể sử dụng hàm
+                            sayHello trong HTML file sau khi bao gồm filename.js này.
+                            <pre>
+                                    function sayHello() { alert("Hello World") }
+                            </pre>
+                            <b>Nên đặt JavaScript trong file ngoại vi để có hiệu suất tốt nhất. Bởi vì:
+                                <li class="li1">Nó phân định rõ ràng HTML và code</li>
+                                <li class="li1">Nó làm cho HTML và JavaScript dễ đọc và bảo trì</li>
+                                <li class="li1">Các file JavaScript được lưu đệm có thể đẩy nhanh tốc độ tải trang </li>
+                            </b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                        <b>Câu 3.2.2:</b> Trong Javascript có những kiểu dữ liệu nào? Làm thế nào để tạo một biến để lưu
+                        trữ giá
+                        trị tương ứng với những kiểu dữ liệu đó?.
+                    </a>
+                </div>
+                <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <div>
+                            <h5>Kiểu động</h5>
+                            JavaScript là một ngôn ngữ định kiểu yếu hay động. Điều đó nghĩa là không cần phải khai báo
+                            kiểu của các biến trước khi dùng. Kiểu sẽ được xác định tự động trong khi chương trình được
+                            thực thi. Điều đó cũng có nghĩa là một biến có thể chứa giá trị của các kiểu dữ liệu khác
+                            nhau:
+                            <img src="./PrtScr capture.jpg" />
+                            <h5>Kiểu dữ liệu</h5>
+                            <ul>Tiêu chuẩn ECMAScript mới nhất xác định bảy kiểu dữ liệu:
+                                <li class="li1">Sáu kiểu sơ khai:</li>
+                                <ul>
+                                    <li>Kiểu boolean</li>
+                                    <li>Kiểu của null</li>
+                                    <li>Kiểu số</li>
+                                    <li>Kiểu của undefined</li>
+                                    <li>Kiểu chuỗi</li>
+                                    <li>Kiểu Symbol (mới trong ECMAScript 6)</li>
+                                </ul>
+                                <li class="li1">Kiểu đối tượng</li>
+                            </ul>
+                            <h5>Khai báo biến</h5>
+                            Để khai báo một biến ta sử dụng từ khóa <b>var tenbien</b>.<br />
+                            <img src="./Bin và khai báo bin trong javascript - Google Chrome.jpg" />
+                            <h5>Gán kiểu giá trị cho biến</h5>
+                            Trong Javascript rất hạn chế về kiểu dữ liệu nhưng bù lại cơ chế xử lý kiểu dữ liệu của nó
+                            rất linh hoạt giúp lập trình viên có thể chuyển đổi một cách dễ dàng, bởi mọi kiểu dữ liệu
+                            đều có thể quy về đối tượng và mỗi đối tượng ta có thể bổ sung các phương thức xử lý riêng.
+                            <br />
+                            Giống như php, để xác định biến có kiểu dữ liệu là gì thì ta dựa vào giá trị mà nó đang có,
+                            có nghĩa khi bạn gán một con số không có dấu chấm động thì nó sẽ là kiểu INT, nếu gán một
+                            chuỗi thì là kiểu String.
+                            <img src="./ss.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                        <b>Câu 3.2.3:</b> Làm thế nào để truy xuất (lấy giá trị) trong 1 thẻ HTML bất kỳ và gán vào 1 biến để trong
+                        Javascript theo ID, theo Class, theo Name, theo tên thẻ HTML và theo CSS Selector (ví dụ
+                        .class, #id)? Cho ví dụ minh họa.
+                    </a>
+                </div>
+                <div id="collapseThree" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <h5>DOM Element trong javascript</h5>
+                           Ví dụ lấy giá trị 1 thẻ HTML và gán vào 1 biến để trong Javascript theo ID
+                        <pre>
+                            &lt;body&gt;
+                                &lt;div id="dongho"&gt;&lt;/div&gt;
+                                    &lt;script type="text/javascript" charset="utf-8"&gt;
+                                        var date = new Date();
+                                        var gio = date.getHours();
+                                        var phut = date.getMinutes();
+                                        var giay = date.getSeconds();
+                                        //Lấy giờ hệ thống hiện tại
+                                        var x = document.getElementById('dongho')
+                                        x.innerHTML = gio + ':' + phut + ':' + giay;
+                                    &lt;/script&gt;		
+                            &lt;/body&gt;
+                        </pre>
+                        <b>Tương tự với class, name và thẻ HTML</b>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
+                        <b>Câu 3.2.4:</b> Xác định các lệnh Javascript tương ứng để thực hiện các yêu cầu sau:<br />
+                        + Viết ghi chú trong Javascript (1 dòng, nhiều dòng)<br />
+                        + Hiển thị thời gian hiện tại (từ năm đến giây theo múi giờ GMT+7 - Việt Nam).<br />
+                        + Viết 1 hàm (function) để tính tổng giá trị của 2 số ngẫu nhiên từ 1 đến 100.<br />
+                        + Đổi màu nền hay hình nền của trang.
+                    </a>
+                </div>
+                <div id="collapseFour" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <h5>Cách ghi chú thích trong JavaScript</h5>
+                        <h6>Viết chú thích trên một dòng</h6>
+                        Nếu phần nội dung chú thích nằm gọn trên một dòng thì bạn chỉ cần đặt cặp dấu // phía trước nó.
+                        <h6>Viết chú thích trên nhiều dòng</h6>
+                        Nếu phần nội dung chú thích trải dài trên nhiều dòng thì ta dùng cặp dấu /* */ để bao quanh chúng.
+                        <h5>Hiển thị thời gian hiện tại</h5>
+                        Ví dụ:
+                        <pre>
+                                    &lt;html&gt; 
+                                    &lt;head&gt; 
+                                        &lt;script type="text/javascript"&gt;
+                                                function timer() 
+                                                {   var currentdate = new Date(); 
+                                                    var datetime = "Last Sync: " + currentdate.getDate() + "/"
+                                                        + (currentdate.getMonth()+1)  + "/" 
+                                                        + currentdate.getFullYear() + " @ "  
+                                                        + currentdate.getHours() + ":"  
+                                                        + currentdate.getMinutes() + ":" 
+                                                        + currentdate.getSeconds();
+                                                    alert(datetime);
+                                                }
+                                        &lt;/script&gt; 
+                                    &lt;/head&gt; 
+                                    &lt;body&gt; 
+                                        &lt;input type="button" onclick="timer()" value="Xin chao!" /> 
+                                    &lt;/body&gt; 
+                                    &lt;/html&gt;
+                        </pre>
+                        <h5>Viết 1 hàm (function) để tính tổng giá trị của 2 số ngẫu nhiên từ 1 đến 100.</h5>
+                        <pre>
+                                &lt;html&gt; 
+                                &lt;head&gt; 
+                                    &lt;script type="text/javascript"&gt;
+                                        function math(){
+                                            var number1= Math.floor(Math.random() * 100) + 1;
+                                            var number2= Math.floor(Math.random() * 100) + 1;
+                                            var result = number1+number2
+                                            alert(number1 + "+" + number2 + "=" + result)
+                                        }
+                                    &lt;/script&gt; 
+                                &lt;/head&gt; 
+                                &lt;body&gt; 
+                                    &lt;input type="button" onclick="math()" value="Nhấn để xem kết quả" /> 
+                                &lt;/body&gt; 
+                                &lt;/html&gt;
+                        </pre>
+                        <h5>Đổi màu nền hay hình nền của trang.</h5>
+                        <pre>
+                                &lt;html&gt;
+                                &lt;head&gt;
+                                &lt;/head&gt;
+                                &lt;body&gt;
+                                    &lt;div id="content" style="padding: 20px; background: #ddd; color: white; margin: 40px 0px;"&gt;
+                                        CHÀO MỪNG BẠN ĐẾN VỚI FREETUTS.NET
+                                    &lt;/div&gt;
+                                    &lt;input type="button" id="btn1" value="Đổi Backgroud màu đỏ"/>
+                                    &lt;script language="javascript"&gt;
+                                        // Lấy 2 button và thẻ div
+                                        var button1 = document.getElementById("btn1");
+                                        var div = document.getElementById('content');
+                                        // Thiết lập click cho button
+                                        button1.onclick = function () {
+                                            div.style.background = "red";
+                                        };
+                                    &lt;/script&gt;
+                                &lt;/body&gt;
+                                &lt;/html&gt;
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

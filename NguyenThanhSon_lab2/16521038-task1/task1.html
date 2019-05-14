@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://getbootstrap.com.vn/examples/dashboard/# -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="http://getbootstrap.com.vn/assets/ico/favicon.ico">
+  <link rel="stylesheet" href="./mau_files/docs.min.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <script type="text/javascript" src="./task1.js"></script>
+  <title>Nguyễn Thanh Sơn - 16521028</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./mau_files/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="./mau_files/dashboard.css" rel="stylesheet">
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <script src="./mau_files/ie-emulation-modes-warning.js"></script>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="./mau_files/ie10-viewport-bug-workaround.js"></script>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style id="holderjs-style" type="text/css"></style>
+  <link rel="stylesheet" href="task1.css">
+</head>
+
+<body>
+
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="https://www.facebook.com/thanhsonnguyen2022">16521038 - Nguyễn Thanh Sơn</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right" role="tablist" id="myTab">
+          <li class="active"><a href="#cau1" role="tab" data-toggle="tab">Câu 1</a></li>
+          <li><a href="#cau2" role="tab" data-toggle="tab">Câu 2</a></li>
+          <li><a href="#cau3" role="tab" data-toggle="tab">Câu 3</a></li>
+          <li><a href="#cau4" role="tab" data-toggle="tab">Câu 4</a></li>
+        </ul>
+        <form class="navbar-form navbar-right">
+          <input type="text" class="form-control" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 col-md-2 sidebar">
+        <ul class="nav nav-sidebar" role="tablist" id="myTab-left">
+          <li class="active"><a href="#cau1" role="tab" data-toggle="tab">Câu 1</a></li>
+          <li><a href="#cau2" role="tab" data-toggle="tab">Câu 2</a></li>
+          <li><a href="#cau3" role="tab" data-toggle="tab">Câu 3</a></li>
+          <li><a href="#cau4" role="tab" data-toggle="tab">Câu 4</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div class="tab-content">
+          <div class="tab-pane active" id="cau1">
+            <h2 class="page-header">Câu 1</h2>
+            <div class="inquestion">Trình bày các cách để tích hợp Bootstrap vào một trang HTML/CSS bình
+              thường trong điều kiện có kết nối Internet:
+            </div>
+            <br />
+            <div class="highlight">
+              <pre><code class="language-html" data-lang="html">
+              <span class="c">&lt;!-- Latest compiled and minified CSS --&gt;</span>
+              <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"</span><span class="nt">&gt;</span>
+              
+              <span class="c">&lt;!-- Optional theme --&gt;</span>
+              <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"</span><span class="nt">&gt;</span>
+              
+              <span class="c">&lt;!-- Latest compiled and minified JavaScript --&gt;</span>
+              <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre>
+            </div>
+            <div class="inquestion">Trong Bootstrap đã được biên dịch gồm:
+            </div>
+            <br />
+            <div class="highlight">
+              <pre><code class="language-bash" data-lang="bash">
+                bootstrap/
+                ├── css/
+                │   ├── bootstrap.css
+                │   ├── bootstrap.min.css
+                │   ├── bootstrap-theme.css
+                │   └── bootstrap-theme.min.css
+                ├── js/
+                │   ├── bootstrap.js
+                │   └── bootstrap.min.js
+                └── fonts/
+                    ├── glyphicons-halflings-regular.eot
+                    ├── glyphicons-halflings-regular.svg
+                    ├── glyphicons-halflings-regular.ttf
+                    └── glyphicons-halflings-regular.woff</code></pre>
+            </div>
+          </div>
+          <div class="tab-pane" id="cau2">
+            <h2 class="page-header">Câu 2</h2>
+            <div class="inquestion">Responsive là gì? Làm thế nào nếu muốn vô hiệu hóa tính năng Responsive khi đang sử
+              dụng Bootstrap?
+            </div>
+            <div>
+              <ul>
+                <li>
+                  Hiểu một cách đơn giản Web Responsive là phong cách thiết kế website làm sao cho phù hợp trên tất cả
+                  các
+                  thiết bị, mọi độ phân giải màn hình. Một website đẹp trên máy tính nhưng khi xem trên điện thoại bố
+                  cục
+                  lộn xộn, hình ảnh, bài viết không cân đối thì không thể gọi là Web Responsive.
+                </li>
+                <li>
+                  Các bước vô hiệu hóa tính năng Responsive khi đang sử dụng Bootstrap:
+                  <br />
+                  <b>Bước 1:</b> Hãy bỏ thẻ &lt;<span class="nt">meta</span> <span class="na">name=</span> <span
+                    class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width,
+                    initial-scale=1"</span>&gt; đi.
+                  <br />
+                  <b>Bước 2:</b> Ghi đè thuộc tính <span class="na">width</span> & <span class="na">max-width</span> của
+                  <span class="na">class=</span><span class="s">“containter”</span>.
+                  đối với mỗi cột trong hệ thống lưới, ví dụ: <span class="s">width: 970px !important;</span> Hãy chắc
+                  chắn rằng, các mã CSS tùy biến này được tích hợp vào sau CSS mặc định của Bootstrap.
+                  Bạn cũng có thể tránh sử dụng <span class="s">!important;</span> bằng các media query hoặc một số
+                  selector-fu.
+                  <br />
+                  <b>Bước 3:</b> Nếu bạn sử dụng thanh điều hướng, hãy vô hiệu hóa toàn bộ các tính năng thu gọn và mở
+                  rộng trên thanh điều hướng đó.
+                  <br />
+                  <b>Bước 4:</b> Đối với các bố cục dạng lưới, hãy sử dụng <span class="na">class</span><span
+                    class="s">.col-xs-*</span> bằng cách thêm vào hoặc thay
+                  thế cho các <span class="na">class=</span> medium/large. Hệ thống lưới trên các thiết bị có màn hình
+                  siêu nhỏ sẽ tự động co
+                  giãn đối với mọi độ phân giải.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-pane" id="cau3">
+            <h2 class="page-header">Câu 3</h2>
+            <div class="inquestion">Tìm hiểu về hệ thống lưới (Grid System) của Bootstrap và so sánh hoạt động của hệ
+              thống
+              lưới này trên các thiết bị có kích thước màn hình khác nhau như Phones (&lt;768px),Tablet
+              ( ≥768px), Desktop( ≥992px và ≥1200px).
+            </div>
+            <div>
+              - Grid System là một hệ thống lưới và bao gồm nhiều dòng và nhiều cột, số lượng dòng bao nhiêu tùy thuộc
+              vào
+              thiết kế của bạn nhưng số lượng cột trên mỗi dòng luôn luôn là 12. Kích thước trong Grid System tính bằng
+              cột, mỗi cột này sẽ chiếm một % nhất định kích thước của layout. Thay vì chỉ định rõ ràng kích thước là
+              200px, 300px, … thì giờ chúng ta sẽ dùng đơn vị là cột. Số phần % của mỗi cột đã được định nghĩa sẵn trong
+              bootstrap. Việc của chúng ta lúc này chỉ đơn giản là sử dụng nó.
+            </div>
+            <br />
+            <div class="inquestion">
+              So sánh hoạt động của hệ thống lưới trên các thiết bị:
+            </div>
+            <img src="./CSS · Bootstrap - Google Chrome.jpg">
+          </div>
+          <div class="tab-pane" id="cau4">
+            <h2 class="page-header">Câu 4</h2>
+            <div class="inquestion">
+              Tìm và cho ví dụ về cách để thực hiện các yêu cầu sau:<br />
+              + Chèn 1 button 1 biểu tượng trong Button đó.<br />
+              + Chèn 1 thanh Progress bar (tiến trình) tương tự trong CV ở Task 1.2.<br />
+              + Chèn các loại cảnh báo (Alert) trong trang như Succes, Info, Danger, Warning.<br />
+              + Chèn 1 menu (Navigation) trong đó có 1 mục có menu con xổ xuống.<br />
+            </div>
+            <br />
+            <div> Ví dụ: Chèn 1 button và 1 biểu tượng trong button đó.</div>
+            <a href="#" class="btn btn-info btn-lg">
+              <span class="fas fa-heart"></span> Love
+            </a> <br /><br />
+            <div> Ví dụ: Chèn 1 thanh Progress bar (tiến trình)</div>
+            <div class="progress">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25"
+                aria-valuemin="0" aria-valuemax="100">
+                Hoàn thành 25%
+              </div>
+            </div>
+            <div> Ví dụ: Chèn các loại cảnh báo (Alert) trong trang như Succes, Info, Danger, Warning.</div>
+            <div class="alert alert-success" role="alert">
+              A simple success alert—check it out!
+            </div>
+            <div class="alert alert-danger" role="alert">
+              A simple danger alert—check it out!
+            </div>
+            <div class="alert alert-info" role="alert">
+              A simple info alert—check it out!
+            </div>
+            <div class="alert alert-warning" role="alert">
+              A simple warning alert—check it out!
+            </div>
+            <div> Ví dụ: Chèn 1 menu (Navigation) trong đó có 1 mục có menu con xổ xuống.</div>
+            <div>
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#">Jax-Jarvan</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Volibear<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Top</a></li>
+                    <li><a href="#">Jungle</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Swain</a></li>
+                <li><a href="#">Malphite</a></li>
+              </ul>
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="./mau_files/jquery.min.js"></script>
+  <script src="./mau_files/bootstrap.min.js"></script>
+  <script src="./mau_files/docs.min.js"></script>
+
+
+</body>
+
+</html>
